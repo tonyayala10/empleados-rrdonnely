@@ -1,0 +1,79 @@
+<div class="col">
+  <h2 class="text-center">Agregar Empleado</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><label for="primerNombre">Primer Nombre:</label></td>
+                    <td>
+                      <input formControlName="primerNombre" class="form-control" required>
+                    </td>
+                    <td><label for="segundoNombre">Segundo Nombre:</label></td>
+                    <td><input formControlName ="segundoNombre" name="segundoNombre" class="form-control" id="segundoNombre">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="primerApellido">Primer Apellido:</label></td>
+                    <td>
+                      <input formControlName="primerApellido" name="primerApellido" class="form-control" id="primerApellido" required>
+                    </td>
+                    <td><label for="segundoApellido">Segundo Apellido:</label></td>
+                    <td>
+                      <input formControlName="segundoApellido" name="segundoApellido" class="form-control" id="segundoApellido">
+                    </td>
+                </tr>
+                <tr>
+                  <td><label for="apellidoCasada">Apellido de Casada:</label></td>
+                  <td>
+                    <input formControlName="apellidoCasada" name="apellidoCasada" class="form-control" id="apellidoCasada" required>
+                  </td>
+                  <td> <label for="correo">Correo electrónico:</label></td>
+                  <td>
+                    <input type="email" formControlName="correo" name="correo" class="form-control" id="correo" required>
+                  </td>
+                </tr>
+                <tr>
+                    <td> <label for="telefono">Tel&eacute;fono Fijo:</label></td>
+                    <td>
+                      <input formControlName="telefono" name="telefono" class="form-control" id="telefono">
+                    </td>
+                    <td>     <label for="celular">Tel&eacute;fono Celular:</label></td>
+                    <td> 
+                      <input formControlName="celular" name="celular" class="form-control" id="celular">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fechaIngreso">Fecha de Ingreso:</label></td>
+                    <td>
+                        <input type="text" formControlName="fechaIngreso" name="fechaIngreso" class="form-control form-control-rounded"  id="fechaIngreso" readonly>
+                    </td>
+                    <td><label for="activo">Activo:</label></td>
+                    <td>
+                      <select class="form-control" id="activo" formControlName="activo" name="activo" required>
+                        <option value="1">SI</option>
+                        <option value="0">NO</option>
+                      </select>
+                    </td>
+                </tr>
+                <tr>
+                  <td><label for="comentario">Comentario:</label></td>
+                  <td colspan="3">
+                    <input formControlName="comentario" name="comentario" class="form-control" id="comentario">
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="text-align: right"><button class="btn btn-success">Guardar</button></td>
+                  <td><button class="btn btn-primary" routerLink="list-customer">Regresar</button></td>
+                  <td></td>
+                </tr>
+            </tbody>
+          </table>
+   </div>
+
+  
+    
+  </form>
+</div>
